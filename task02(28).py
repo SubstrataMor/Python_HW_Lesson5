@@ -4,3 +4,12 @@
 # Также нельзя использовать циклы.
 # 2 2
 # 4
+
+def find_sum(a: int, b: int, summ = 0) -> int:
+    if b == 0:
+        return a    
+    return find_sum(a+1, b-1, summ)
+    
+a = int(input('Введите число: '))
+b = int(input('Введите степень: '))
+print(find_sum(a, b))
